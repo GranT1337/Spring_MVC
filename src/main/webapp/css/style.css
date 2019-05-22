@@ -1,0 +1,385 @@
+*{
+  box-sizing: border-box
+}
+
+
+body {
+  margin: 0;
+  background: #edeef0;
+}
+
+
+#header {
+  position: relative;
+  margin-top: 0;
+  left: 0
+  margin-left: 0;
+  width: 100%
+  min-width: 980px;
+  height: 337px;
+  text-align: center;
+}
+
+
+#content {
+  width: 1300px;
+  min-height: 1600px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+
+#left {
+  position: sticky;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  float: left;
+}
+
+#right {
+ position: sticky;
+  top: 0;
+  height: 100%;
+  width: 240px;
+  float: right;
+  border-collapse: collapse;
+  background: white;
+  text-align: center;
+}
+
+#output {
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 240px;
+  float: right;
+  border-bottom: 1px solid #EEE;
+  background-color: white;
+}
+
+
+
+
+#centre {
+  position: relative;
+  width: 880px;
+  min-height: 500px;
+  float: left;
+  border-right: 1px solid #EEE;
+  border-left: 1px solid #EEE;
+  background: white;
+  margin: 0 auto;
+}
+
+
+#centreOrder {
+    margin-left: 15%; 
+    width: 70%;
+    padding: 60px;
+  background: white;
+}
+
+#clearer {
+  clear: both;
+}
+
+#coffee {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#tea {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+  width: 160px;
+}
+
+.menu li a {
+  display: block;
+  text-decoration: none;
+  padding: 12px 20px;
+  color: #777;
+
+  text-align: left;
+  height: 36px;
+  position: relative;
+  border-bottom: 1px solid #EEE;
+}
+
+.menu li:hover > a {
+  color: #feca5f;
+}
+
+
+.img {
+height: 144px;
+width: 144px;
+}
+
+
+.tablica{
+  padding: 40px 10px;
+  width: 880px;
+  table-layout: fixed;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+.tablica td {
+  border: 0px solid #000;
+}
+
+.tablica tr:hover td {
+  background: #f0f2f5;
+}
+
+.tablica td.label{
+  width: 400px;
+  margin-top: 0px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20pt;
+  margin-bottom: 10px;
+}
+
+.tablica td.photo{
+  width: 160px;
+}
+
+
+.tablica td.volume {
+  width: 70px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tablica td.money {
+  width: 200px;
+  text-align: center;
+
+}
+
+.plus {
+  text-align: center;
+}
+
+
+.modalDialog {
+  position: fixed;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  display: none;
+
+}
+
+
+.modalDialog:target {
+  display: block;
+  pointer-events: auto;
+}
+
+.modalDialog > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: white;
+}
+
+.close {
+  background: red;
+  color: white;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.number{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+input {
+  text-align: center;
+}
+
+
+.add{
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 140px;
+  color: white;
+  text-decoration: none;
+  padding: 3px 3px;
+  background: rgb(64,199,129);
+  text-align: center;
+} 
+
+
+.notAvailable{
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 140px;
+  color: white;
+  text-decoration: none;
+  padding: 3px 3px;
+  background: red;
+  text-align: center;
+} 
+
+
+h2{
+  text-align: center;
+}
+
+tr.border_bottom td {
+  border-bottom: 1px solid #EEE;
+}
+
+.addNewCoffee {
+  width: 100%;
+}
+
+
+.centreOnly {
+  text-align: center;
+}
+
+
+#addOnMenu{
+  text-decoration: none;
+}
+
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.form-block {
+  text-align: center;
+  border-bottom: 1px solid #EEE;
+}
+
+
+.delete_btn {
+cursor: pointer;
+}
+
+.pills {
+  margin-left: 15%;
+  margin-right: 15%;
+  list-style: none;
+  counter-reset: li;
+  font-family: calibri;
+}
+.pills li {
+  padding: 10px;
+  position: relative;
+  left: 1.5em;
+  margin-bottom: 0.75em;
+  padding-left: 1em;
+  background: #E3DEDC;
+}
+.pills li:before {
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.5em;
+  width: 1.875em;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background: #60b098;
+  border-bottom-left-radius: 70em;
+  border-top-left-radius: 70em;
+  counter-increment: li;
+  content: counter(li);
+}
+
+.pillsAdmin {
+  margin-left: 15%;
+  margin-right: 15%;
+  list-style: none;
+  counter-reset: li;
+  font-family: calibri;
+}
+.pillsAdmin li {
+  padding: 10px;
+  position: relative;
+  left: 1.5em;
+  margin-bottom: 0.75em;
+  padding-left: 1em;
+  background: #E3DEDC;
+}
+.pillsAdmin li:before {
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.5em;
+  width: 1.875em;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background: #60b098;
+  border-bottom-left-radius: 70em;
+  border-top-left-radius: 70em;
+  counter-increment: li;
+  content: counter(li);
+}
