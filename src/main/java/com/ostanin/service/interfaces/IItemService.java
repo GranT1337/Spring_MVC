@@ -10,4 +10,6 @@ public interface IItemService {
 
     List<Item> teaList();
 
+    List<Item> searchList(String searchString);
+
 }

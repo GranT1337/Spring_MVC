@@ -46,4 +46,22 @@ public class ItemDao implements IItemDao {
         List<Map<String, Object>> rs = jdbcTemplate.queryForList(sql);
         return rs;
     }
+
+
+    @Override
+    public List<Item> searchItems(String searchString) {
+        String sql = "SELECT title,price,weight,photo_link, idcategory FROM restaurant.menu WHERE `title` LIKE '%" + searchString + "%';";
+        List<Item> items = new ArrayList<>();
+        List<Map<String, Object>> resultSearchList = jdbcTemplate.queryForList(sql);
+        for (Map row : resultSearchList) {
+            Item item = new Item();
+            item.setTitle((String)(row.get("title")));
+            item.setPrice((Integer)(row.get("price")));
+            item.setWeight((String)(row.get("weight")));
+            item.setPhoto_link((String)(row.get("photo_link")));
+            item.setIdcategory((Integer)(row.get("idcategory")));
+            items.add(item);
+        }
+        return items;
+    }
 }

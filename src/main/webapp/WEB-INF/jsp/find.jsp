@@ -38,9 +38,11 @@
                 <p><input type="search" name="searchString" placeholder="Поиск по сайту"> 
                 <input id="search" type="submit" value="Найти"></p>
             </form>
-    	<h1 id="coffee">Классическое кофе</h1>
+            
+            <button class="button button3" onclick="window.location='/home'">Вернуться на главную</button>
+            
         <table class="tablica" cellpadding="10">
-          <c:forEach var="item" items="${COFFEE}" varStatus="status">
+          <c:forEach var="item" items="${SEARCH_LIST}" varStatus="status">
             <tr class="border_bottom">
               <td class="photo"> 
                 <img class="img" src="${item.photo_link}">
@@ -53,26 +55,6 @@
               </td>
               <td class="money">
                 <div name="price1">${item.price}₽</div>
-              </td>
-            </tr>
-          </c:forEach>
-        </table>
-
-      <h1 id="tea">Может по чаю?</h1>
-				<table class="tablica" cellpadding="10">
-          <c:forEach var="item" items="${TEA}" varStatus="status">
-            <tr class="border_bottom">
-              <td class="photo"> 
-                <img class="img" src="${item.photo_link}">
-              </td>
-              <td valign="top" class="label">
-                ${item.title}
-              </td>
-              <td class="volume">
-                ${item.weight} мл.
-              </td>
-              <td class="money">
-                ${item.price}₽
               </td>
             </tr>
           </c:forEach>

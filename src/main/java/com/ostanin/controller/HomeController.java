@@ -71,7 +71,7 @@ public class HomeController {
 
     @PostMapping("/topup")
     @ResponseBody
-    public ModelAndView topUppost(@RequestParam(required=false, value="money") String money) {
+    public ModelAndView topUpPost(@RequestParam(required=false, value="money") String money) {
         ModelAndView modelAndView = new ModelAndView();
         try {
             userService.money(money);
@@ -85,6 +85,34 @@ public class HomeController {
         return modelAndView;
     }
 
+
+//    @RequestMapping("/find")
+//    public ModelAndView findCoffee() {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("currentUserRole", userManager.getUser().getRole());
+//        modelAndView.addObject("userName", userManager.getUser().getName());
+//        modelAndView.addObject("userBalance", userManager.getUser().getBalance());
+//        modelAndView.addObject("addINGREDIENT", ingredientService.getHavingAdditionalIngredient());
+//        modelAndView.setViewName("find");
+//        return modelAndView;
+//    }
+
+    @RequestMapping("/find")
+    @ResponseBody
+    public ModelAndView findCoffeePost(@RequestParam(required=false, value="searchString") String searchString) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("SEARCH_LIST", itemService.searchList(searchString));
+        modelAndView.addObject("currentUserRole", userManager.getUser().getRole());
+        modelAndView.addObject("userName", userManager.getUser().getName());
+        modelAndView.addObject("userBalance", userManager.getUser().getBalance());
+        modelAndView.addObject("addINGREDIENT", ingredientService.getHavingAdditionalIngredient());
+        modelAndView.addObject("COFFEE", itemService.coffeeList());
+        modelAndView.addObject("TEA", itemService.teaList());
+
+
+        modelAndView.setViewName("find");
+        return modelAndView;
+    }
 
 
 

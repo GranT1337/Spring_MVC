@@ -10,4 +10,6 @@ public interface IItemDao {
 
     List<Map<String, Object>> alllItems();
 
+    List<Item> searchItems(String searchString);
+
 }

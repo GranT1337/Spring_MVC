@@ -51,4 +51,11 @@ public class ItemService implements IItemService {
         return teaList;
     }
 
+    @Override
+    public List<Item> searchList(String searchString) {
+        return itemDao.searchItems(searchString);
+    }
+
+
+
 }
